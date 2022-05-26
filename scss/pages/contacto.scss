@@ -1,0 +1,57 @@
+@import "../Components/mixin.scss";
+@import "../Components/variables.scss";
+
+.container {
+  @include containerDefault;
+  .contacto__h3{
+    @include h3Properties;
+  }
+  .form {
+    box-shadow:  map-get($box-shadow-gradiant, medium );
+    background-color: map-get($colors,pink-bold);
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 600px;
+    padding: 20px;
+    margin: 150px 0px;
+    .contacto__input__container {
+      height: 40px;
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+      .contacto__input{
+        background-color: map-get($colors,contact-input);
+        border-radius: 12px;
+        box-sizing: border-box;
+        color: map-get($colors,contact);
+        font-size: 24px;
+        height: 100%;
+        padding: 4px 20px 0;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .contacto__textarea{
+        @extend .contacto__input;
+        height: 150px;
+        padding: 12px 20px;
+        margin-bottom: 50px;
+      }
+      .contacto__text{
+        font-size: 20px;
+      }
+      .contacto__submit{
+        background-color: map-get($colors,contact-input);
+        border-radius: 10px;
+        border: 0;
+        box-sizing: border-box;
+        color: map-get($colors,contact);
+        cursor: pointer;
+        font-size: 18px;
+        height: 50px;
+        margin-top: 38px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+$font-Mulish: "Mulish", sans-serif;
+$resolutions:(
+    mobile: 480px,
+    tablet: 768px,
+    desktop: 1024px
+);
+$box-shadow-gradiant:(
+    min: 0 0.1rem 1rem rgba(0, 0, 0, 0.2),
+    medium: 0 0.1rem 1rem rgba(0, 0, 0, 0.5),
+    max:0 0.1rem 1rem rgba(0, 0, 0, 0.1),
+);
+$colors:(
+    h3:#495057,
+    pink-bold: #fcd5ce,
+    contact-input: #303245,
+    contact:#eee,
+    novedades: #fff,
+    tarjeta:#ece9e6,
+    p: #666
+)
