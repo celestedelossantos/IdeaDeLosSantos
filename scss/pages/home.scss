@@ -1,0 +1,189 @@
+@import "../Components/_mixin.scss";
+@import "../Components/variables.scss";
+
+.container {
+    @include containerDefault;
+    .container__introduccion {
+      display: flexbox;
+      justify-content: center;
+      width: 100%;
+      .container__introduccion__p {
+        font-size: 20px;
+        color: #e9ecef;
+        position: absolute;
+        margin: 1%;
+        width: 50%;
+        z-index: 4;
+        right: 15%;
+        top: 18%;
+        font-family: "EB Garamond", serif;
+
+        @include tablet {
+          top:12%;
+        }
+      }
+  
+      .container__introduccion__fondo {
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+        width: 70%;
+        height: 500px;
+        border-radius: 10px;
+        position: absolute;
+        box-shadow: map-get($box-shadow-gradiant, medium );
+      }
+  
+      .container__introduccion__img {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+      }
+    }
+  
+    .novedades {
+      margin: 5% 0%;
+      font-family: $font-Mulish;
+      .novedades__h3 {
+        @include h3Properties;
+      }
+      .novedades__articulo {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+          display: block;
+        }
+        .novedades__img {
+          max-width: 50%;
+          border-radius: 50%;
+          margin: auto;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          @include tablet {
+            max-width: 90%;
+          }
+        }
+        .novedades__tarjeta__contenedor {
+          display: flex;
+          background-color: map-get($colors,contact);;
+          border-radius: 10px;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          max-width: 100%;
+          overflow: hidden;
+          width: 700px;
+          margin-left: 3rem;
+
+          @include tablet {
+            margin-top: 6rem;
+          }
+
+          .novedades__tarjeta__izquierda {
+            background-color: #2a265f;
+            color: map-get($colors,novedades);
+            padding: 30px;
+            max-width: 250px;
+            .novedades__tarjeta__h6 {
+              opacity: 0.6;
+              margin: 0;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+            .novedades__tarjeta__h2 {
+              letter-spacing: 1px;
+              margin: 10px 0;
+            }
+            .novedades__tarjeta__izquierda__link {
+              color: map-get($colors,novedades);
+              display: inline-block;
+              font-size: 12px;
+              opacity: 0.6;
+              margin-top: 30px;
+              text-decoration: none;
+            }
+          }
+          .novedades__tarjeta__derecha {
+            padding: 30px;
+            position: relative;
+            width: 100%;
+            .novedades__tarjeta__h6 {
+              opacity: 0.6;
+              margin: 0;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+            .novedades__tarjeta__h2 {
+              letter-spacing: 1px;
+              margin: 10px 0;
+            }
+            .novedades__boton {
+              background-color: #2a265f;
+              border: 0;
+              border-radius: 50px;
+              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+              color: map-get($colors,novedades);
+              font-size: 16px;
+              padding: 12px 25px;
+              position: absolute;
+              bottom: 30px;
+              right: 30px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  
+    .reseñas {
+      margin: 5% 0%;
+      font-family: $font-Mulish;
+      .reseñas__h3 {
+        @include h3Properties;
+      }
+      .reseñas__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .tarjeta {
+          width: 30%;
+          overflow: hidden;
+          box-shadow: map-get($box-shadow-gradiant, medium );
+          border-radius: 1em;
+          background: map-get($colors,tarjeta);
+          background: linear-gradient(to right, map-get($colors,novedades), map-get($colors,novedades));
+          @include tablet {
+            width: 100%;
+            margin: 5% 20%;
+          }
+          .tarjeta__header {
+            .tarjeta__header__img {
+              width: 100%;
+            }
+          }
+          .tarjeta__body {
+            padding: 1rem;
+            gap: 0.5rem;
+            .tarjeta__body__h4 {
+              font-family: $font-Mulish;
+              font-size: 1.5rem;
+              text-transform: capitalize;
+            }
+          }
+          .tarjeta__footer {
+            padding: 1rem;
+            margin-top: auto;
+            .usuario {
+              .usuario__image {
+                border-radius: 40%;
+                width: 20%;
+                height: 10%;
+              }
+  
+              .usuario__descripcion {
+                small {
+                  color: map-get($colors,p);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

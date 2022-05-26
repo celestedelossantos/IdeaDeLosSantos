@@ -1,6 +1,6 @@
 const menu = document.querySelector(".nav");
 const buguerButton = document.querySelector("#burger-menu");
-const ipad = window.matchMedia("screen and (max-width:600px)");
+const ipad = window.matchMedia("screen and (max-width:768px)");
 console.log(buguerButton);
 ipad.addListener(validation);
 function validation(event) {

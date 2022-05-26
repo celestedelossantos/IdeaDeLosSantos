@@ -1,0 +1,30 @@
+@import "../Components/mixin.scss";
+@import "../Components/variables.scss";
+
+.container {
+  @include containerDefault;
+  .ubicacion__section {
+    height: auto;
+
+    .ubicacion__h3 {
+      @include h3Properties;
+    }
+
+    .ubicacion__p {
+      font-size: 30px;
+      color: map-get($colors,p);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .ubicacion__mapa {
+      display: flex;
+      width: 100%;
+      height: 50rem;
+      .ubicacion__mapa__iframe {
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: map-get($box-shadow-gradiant, medium );
+      }
+    }
+  }
+}

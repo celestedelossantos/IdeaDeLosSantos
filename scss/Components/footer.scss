@@ -1,0 +1,48 @@
+@import "./variables.scss";
+@import "../Components/mixin.scss";
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1% 10%;
+  bottom: 0;
+  width: 100%;
+  background-color: map-get($colors, pink-bold);
+  box-shadow: 0 0 50px rgba(254, 197, 187, 0.9);
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__container__cr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    .footer__img {
+      height: 50%;
+      border-radius: 50px;
+      height: 50px;
+      width: 50px;
+    }
+    .footer__copyRight {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      color: map-get($colors, h3);
+      margin-left: 20px;
+    }
+  }
+
+  .footer__link {
+    font-family: "Roboto", sans-serif;
+    color: map-get($colors, h3);
+    text-decoration: none;
+    font-size: 20px;
+    .footer__img {
+      height: 50%;
+      border-radius: 50px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

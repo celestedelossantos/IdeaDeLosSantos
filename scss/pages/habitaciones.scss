@@ -1,0 +1,62 @@
+@import "../Components/mixin.scss";
+.container {
+  @include containerDefault;
+
+  .habitaciones__h3 {
+    @include h3Properties;
+  }
+  .slider {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0.1rem 1rem rgba(213, 97, 184, 0.501);
+    border: solid 1px rgba(213, 97, 184, 0.501);
+    @include tablet {
+      height: 20rem;
+    }
+    ul {
+      display: flex;
+      padding: 0;
+      width: 500%;
+      animation: change 20s infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+    }
+    li {
+      list-style: none;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @keyframes change {
+      0% {
+        margin-left: 0;
+      }
+      20% {
+        margin-left: 0;
+      }
+      25% {
+        margin-left: -100%;
+      }
+      45% {
+        margin-left: -100%;
+      }
+      50% {
+        margin-left: -200%;
+      }
+      70% {
+        margin-left: -200%;
+      }
+      75% {
+        margin-left: -300%;
+      }
+      100% {
+        margin-left: -300%;
+      }
+    }
+  }
+}
