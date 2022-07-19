@@ -8,18 +8,28 @@ const passwordRegister = document.querySelector("#passwordRegister");
 const registerSubmit = document.querySelector("#registerSubmit");
 
 const userLoged = JSON.parse(localStorage.getItem("user"));
+const ul = document.querySelector('ul');
+const logout = document.createElement('li');
 
 if(userLoged){
     const loginButton = document.querySelector("#loginButton");
     const signup = document.querySelector('#signUpButton');
+    logout.classList.add('nav__list');
+    logout.innerHTML = `<a id="logout" class="nav__link" href="#">Salir</a>`
+    ul.appendChild(logout);
+
     signup.style.display = 'none';
     loginButton.textContent = `Hola ${userLoged.nombre}`
     loginButton.href = 'index.html';
     loginButton.addEventListener('click',()=>{
         alert('Proximamente pantalla perfil... ')
     })
+    document.querySelector("#logout").addEventListener('click',()=>{
+        localStorage.removeItem('user');
+        alert('Deslogueado... enter para continuar.');
+        window.location.pathname = 'index.html';
+    })
 }else{
-    // seteo dos usuarios para probar.
     localStorage.setItem('data',JSON.stringify(data));
 }
 
