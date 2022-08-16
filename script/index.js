@@ -1,5 +1,5 @@
-import responsive from "./responsive.js";
 import {nombresDeGatos} from './constant/nombres.js';
+import responsive from "./responsive.js";
 responsive();
 const individual = {
   descripcion: 'Individual - Gatito',
