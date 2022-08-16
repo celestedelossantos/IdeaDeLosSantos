@@ -143,6 +143,7 @@
         flex-wrap: wrap;
         .tarjeta {
           width: 30%;
+          margin-top: 20px;
           overflow: hidden;
           box-shadow: map-get($box-shadow-gradiant, medium );
           border-radius: 1em;
